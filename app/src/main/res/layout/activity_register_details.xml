@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="Профиль и Пароль"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ваше имя будет видно всем другим пользователям."
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Полное имя"
+            android:textSize="19sp"/>
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:hint="Введите своё имя"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Пароль"
+            android:textSize="19sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:hint="Введите пароль"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_toStartOf="@+id/eyeIcon"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:id="@+id/eyeIcon"
+                android:layout_width="47dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/eye" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/valid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Не менее 8 символов"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Продолжить"
+            android:backgroundTint="#3668C7"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

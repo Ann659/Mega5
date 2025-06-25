@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Login Account"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/btn_dialog"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/app_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/subtitleText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пожалуйста, обратите внимание, что вы должны использовать адрес  электронной почты, на который сможете получить письмо от MEGA со ссылкой для подтверждения."
+            android:textSize="16sp"
+            android:textColor="@color/gray_text"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:text="Войти"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue_button"
+        android:textAllCaps="false"
+        android:elevation="4dp"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="bottom_nav_selected"
+        tools:ignore="ExtraText,MissingPrefix">@color/purple_500</color>
+
+    <color name="bottom_nav_unselected"
+        tools:ignore="MissingPrefix">@color/gray_500</color>
+
+    <color name="bottom_nav_background"
+        tools:ignore="MissingPrefix">@color/white</color>
+</resources>

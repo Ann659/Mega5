@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mega</string>
+    <string name="title_home">Home</string>
+    <string name="title_wishlist">Wishlist</string>
+    <string name="title_order">Orders</string>
+    <string name="title_account">Account</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+        <color name="blue_button">#2196F3</color>
+        <color name="red_stripe">#FF0000</color>
+        <color name="gray_text">#757575</color>
+    <string name="app_logo">Логотип приложения</string>
+    <string name="welcome_title">Добро пожаловать!</string>
+    <string name="welcome_subtitle">Заведите аккаунт, прежде чем исследовать уголки нашего приложения.</string>
+    <string name="next">Далее</string>
+    <string name="code_sent_to_email">Код отправлен на %s</string>
+    <string name="code_sent_to_phone">Код отправлен на %s</string>
+</resources>
