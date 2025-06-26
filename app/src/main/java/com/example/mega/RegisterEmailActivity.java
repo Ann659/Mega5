@@ -36,10 +36,22 @@ public class RegisterEmailActivity extends AppCompatActivity {
     private void initViews() {
         etEmail = findViewById(R.id.etEmail);
         btnContinue = findViewById(R.id.btnContinue);
+        back = findViewById(R.id.tvRegister);
+
+        btnNext = findViewById(R.id.btnNext);
+        btnNext.setEnabled(false);
     }
 
     private void setupListeners() {
-        btnContinue.setOnClickListener(v -> {
+        etEmail.addTextChangedListener(new TextValidator(etEmail) {
+            @Override
+            public void validate(EditText editText, String text) {
+                boolean isValid = validateEmailInput(text);
+                btnNext.setEnabled(isValid);
+            }
+        });
+
+        btnNext.setOnClickListener(v -> {
             email = etEmail.getText().toString().trim();
             if (Validator.validateEmail(email)) {
                 supabaseClient.getUserByEmail(email, new SupabaseClient.SupabaseCallback() {
@@ -81,7 +93,30 @@ public class RegisterEmailActivity extends AppCompatActivity {
         });
     }
 
-    private abstract static class TextValidator implements TextWatcher {
+    private boolean validateEmailInput(String text) {
+        if (text.isEmpty() || !text.contains("@")) {
+            return false;
+        }
+        String[] parts = text.split("@");
+        if (parts.length != 2) {
+            return false;
+        }
+        String prefix = parts[0];
+        if (prefix.matches("^[a-zA-Z]{4,8}$")) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isFormValid() {
+        String text = etEmail.getText().toString().trim();
+        if (!validateEmailInput(text)) {
+            return false;
+        }
+        return Validator.validateEmail(text);
+    }
+
+    private abstract class TextValidator implements TextWatcher {
         private final EditText editText;
 
         public TextValidator(EditText editText) {
@@ -98,7 +133,8 @@ public class RegisterEmailActivity extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable s) {
-            validate(editText, editText.getText().toString());
+            validate(editText, s.toString());
+            btnNext.setEnabled(isFormValid());
         }
     }
 }

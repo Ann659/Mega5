@@ -47,7 +47,7 @@ public class LoginPinActivity extends AppCompatActivity {
                     .getString("user_pin", "");
 
             if (enteredPin.equals(savedPin)) {
-                Log.d("PIN_AUTH", "PIN correct, navigating to MainActivity3");
+                Log.d("PIN_AUTH", "PIN-код верный, идёт навигация в MainActivity3");
                 navigateToMain();
             } else {
                 showErrorDialog("Неверный PIN-код. Пожалуйста, попробуйте снова.");

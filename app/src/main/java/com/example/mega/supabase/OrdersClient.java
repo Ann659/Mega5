@@ -15,8 +15,9 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class OrdersClient {
-    private static final String SUPABASE_URL = "https://your-supabase-url.supabase.co";
-    private static final String SUPABASE_KEY = "your-supabase-key";
+    private static final String SUPABASE_URL = "https://tfkqryzcarmldinfgvum.supabase.co";
+    private static final String SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRma3FyeXpjYXJtbGRpbmZndnV" +
+            "tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkwMDU5OTUsImV4cCI6MjA2NDU4MTk5NX0.35UFLF36l_weEbdBCLXJl-UIuGEUPMZG0zMu0Q4Wue4";
     private OkHttpClient httpClient;
 
     public OrdersClient() {

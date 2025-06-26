@@ -90,7 +90,7 @@ public class CheckoutViewModel extends ViewModel {
                     try {
                         Order order = parseOrderFromJson(response);
                         isLoading.setValue(false);
-                        clearCart(); // Очищаем корзину после успешного заказа
+                        clearCart();
                         callback.onSuccess(order);
                     } catch (JSONException e) {
                         isLoading.setValue(false);

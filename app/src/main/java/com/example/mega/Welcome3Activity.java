@@ -27,9 +27,4 @@ public class Welcome3Activity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
-    @Override
-    public void onBackPressed() {
-        moveTaskToBack(true);
-    }
 }

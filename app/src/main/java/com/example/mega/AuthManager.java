@@ -7,8 +7,11 @@ public class AuthManager {
     private static AuthManager instance;
     private SharedPreferences sharedPreferences;
     private static Context appContext;
+    private static boolean initialized = false;
+
 
     public static void init(Context context) {
+        initialized = true;
         appContext = context.getApplicationContext();
     }
 
@@ -21,7 +24,7 @@ public class AuthManager {
 
     public static synchronized AuthManager getInstance() {
         if (instance == null) {
-            if (appContext == null) {
+            if (!initialized) {
                 throw new IllegalStateException("Call AuthManager.init(context) first");
             }
             instance = new AuthManager();

@@ -31,6 +31,7 @@ public class Login1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AuthManager.init(getApplicationContext());
         setContentView(R.layout.activity_login);
 
         authManager = AuthManager.getInstance();
@@ -44,6 +45,9 @@ public class Login1Activity extends AppCompatActivity {
     }
     private void initViews() {
         etEmail = findViewById(R.id.etEmail);
+        etEmail.setFocusableInTouchMode(true);
+        etEmail.setFocusable(true);
+        etEmail.setEnabled(true);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvRegister = findViewById(R.id.tvRegister);

@@ -72,10 +72,9 @@ public class RegisterDetailsActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     try {
                         String userId = response.getJSONObject(0).getString("user_id");
-                        // Save user data after registration
+
                         AuthManager authManager = AuthManager.getInstance();
                         authManager.saveUserData(userId, fullName, System.currentTimeMillis());
-
                         Toast.makeText(RegisterDetailsActivity.this,
                                 "Регистрация успешна!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegisterDetailsActivity.this, MainActivity3.class));

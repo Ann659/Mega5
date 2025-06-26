@@ -107,7 +107,7 @@ public class ProductDetailFragment extends Fragment {
         reviewsRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Review> reviews = new ArrayList<>();
-        reviews.add(new Review("Иван Иванов", 4.5f, "Отличный товар, всем рекомендую!", "15 мая 2023"));
+        reviews.add(new Review("Иван Иванов", 4.5f, "Отличный товар!", "15 мая 2023"));
         reviews.add(new Review("Анна Петрова", 5f, "Прекрасное качество за эти деньги", "10 июня 2023"));
 
         ReviewAdapter adapter = new ReviewAdapter(reviews);

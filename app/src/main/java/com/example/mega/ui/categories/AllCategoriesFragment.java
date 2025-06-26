@@ -34,7 +34,6 @@ public class AllCategoriesFragment extends Fragment {
         navController = Navigation.findNavController(view);
         categoriesClient = new CategoriesClient();
 
-        // Set up back button
         view.findViewById(R.id.backButton).setOnClickListener(v -> navController.popBackStack());
 
         loadCategories(view);

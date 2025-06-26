@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
+
 public class CheckoutViewModelFactory implements ViewModelProvider.Factory {
     private final String orderId;
 
@@ -17,6 +19,7 @@ public class CheckoutViewModelFactory implements ViewModelProvider.Factory {
         if (modelClass.isAssignableFrom(CheckoutViewModel.class)) {
             return (T) new CheckoutViewModel();
         }
-        throw new IllegalArgumentException("Unknown ViewModel class");
+        Log.w("CheckoutViewModelFactory", "Unknown ViewModel class: " + modelClass.getName());
+        return null;
     }
 }
